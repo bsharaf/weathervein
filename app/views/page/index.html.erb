@@ -1,0 +1,102 @@
+
+
+
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#download">Download</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                           <% if user_signed_in? %>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %> 
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">WeatherVein </h1
+                        <h2  class="intro-text">A free, accurate, weather app that combines the best forecasts in your area so you don't have to!</h2>
+
+                        <div class="page-scroll">
+                            <a href="#about" class="btn btn-circle">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About WeatherVein</h2>
+                <p>Technology has greatly increased our ability to shape the future. With the rise of brilliant innovations from smartphone technology to virtual currency, we are quickly turning tomorrow’s tech into today’s reality. Yet despite all our advances, we still cannot seem to accurately predict the weather. Some may believe that Mother Nature is simply too precarious to make precise projections about tomorrow’s weather, but in actuality, we have too much information to predict the weather. </p>
+                <p>With countless weather satellites, meteorologists, and news sources, the average American is completely overwhelmed with forecasts. WeatherVein aggregates the most popular and accurate forecasts into one, all-inclusive forecast so you can get the best prediction before you start your day. When you download WeatherVein, the top five forecasts from sites such as Weather.com, Accuweather, and the National Oceanic and Atmospheric Association appear instantly on your phone.</p>
+                <p>Best of all, this app combines these predictions into an average forecast that represents all the expert’s predictions in one comprehensive forecast. With WeatherVein you can enjoy every day rain or shine rather than cancelling your plans because of unpredicted weather.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download WeatherVein</h2>
+                    <p>You can download WeatherVein for free at the IOS App Store. Coming soon to the Google Play Store</p>
+                    <a href="https://itunes.apple.com/us/genre/ios/id36?mt=8" class="btn btn-default btn-lg">Download the App</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+                <p>Feel free and email us to complain about or celebrate the accuracy of our forecasts </p>
+                <p>Feedback@WeatherVein.com</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li><a href="https://twitter.com/WeatherVein1" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li><a href="https://github.com/bsharaf/weathervein" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li><a href="https://www.google.com/#q=WeatherVein" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google Us</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
